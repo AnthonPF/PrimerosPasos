@@ -37,13 +37,16 @@ public class doWhileStatement {
         while(number<=finishNumber)  {
             if(!isEvenNumber(number)){
                 number++;
-                evenNumbersCount++;
                 continue;
             }
-            System.out.println("Even number " + number + ", total neven numbers found = " + evenNumbersCount);
+            evenNumbersCount++;
+            if(evenNumbersCount>=5){
+                break;
+            }
+            System.out.println("Even number " + number);
             number++;
-
         }
+        System.out.println("Total even numbers found = " + evenNumbersCount);
     }
 
          //EJERCICIO VIDEO

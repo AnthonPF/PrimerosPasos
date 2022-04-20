@@ -21,6 +21,11 @@ public class Account {
         this(45667, 2.5, "pepe", "mail@mail", "2222");
         System.out.println("Empty constructor called");
     }
+    //CONSTRUCTOR CON 2 PARAMETROS POR DEFECTO Y LO DEMAS ABIERTO
+    public Account(String customerName, String email, String phoneNumber){
+        this(9999,100.55,customerName, email, phoneNumber);
+        System.out.println("Partial constructor called");
+    }
 
     public void deposit(double depositAmount){
         this.balance=this.balance+depositAmount;

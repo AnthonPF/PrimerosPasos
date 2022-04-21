@@ -11,12 +11,20 @@ public class Roof {
         this.isFanOn=isFanOn;
     }
 
-    public void turnOnFan(){
+    public void pressSwitch(){
+        if(isFanOn==false){
+            turnOnFan();
+        }else{
+            turnOffFan();
+        }
+    }
+
+    private void turnOnFan(){
         isFanOn=true;
         System.out.println("Fan is on");
     }
 
-    public void turnOffFan(){
+    private void turnOffFan(){
         isFanOn=false;
         System.out.println("Fan is off");
     }
